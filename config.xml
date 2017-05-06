@@ -8,5 +8,5 @@
 
 	<access origin="*"/>
 	<access 
-		uri="https://jsonplaceholder.typicode.com" subdomains="true"/>
+		uri="https://jsonplaceholder.typicode.com/.*" subdomains="true"/>
 </widget>

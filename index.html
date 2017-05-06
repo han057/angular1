@@ -1,0 +1,33 @@
+<html data-ng-app="app">
+<head>
+	<title>Posts AngularJS</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<header>
+		<div class="page-header">
+			<h1>Angular POSTS</h1>
+		</div>
+	</header>
+	<section data-ng-controller="postController as postCtrl">
+		<article class="panel panel-primary"
+			data-ng-repeat="p in postCtrl.posts"
+			data-ng-show="postCtrl.posts.length > 0">
+			<div class="panel-heading">
+				<h5>Título: {{p.title}}</h5>
+			</div>
+			<p>{{p.body}}</p>
+		</article>
+		<article 
+			data-ng-hide="postCtrl.posts.length > 0">
+			No hay posts
+		</article>
+	</section>
+	<footer>
+		Fredy Hernan Sanchez Montaña
+	</footer>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/postController.js"></script>
+</body>
+</html>
